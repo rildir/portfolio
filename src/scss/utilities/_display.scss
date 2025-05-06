@@ -1,0 +1,55 @@
+@use "properties" as props;
+
+@each $name, $value in props.$display-properties {
+  .#{$name} {
+    display: #{$value} !important;
+  }
+}
+
+@each $direction in props.$flex-direction-properties {
+  .flex-#{$direction} {
+    flex-direction: #{$direction} !important;
+  }
+}
+
+@each $wrap in props.$flex-wrap-properties {
+  .flex-#{$wrap} {
+    flex-wrap: #{$wrap} !important;
+  }
+}
+
+@each $name, $value in props.$justify-content-properties {
+  .justify-#{$name} {
+    justify-content: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$align-items-properties {
+  .align-#{$name} {
+    align-items: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$align-content-properties {
+  .align-content-#{$name} {
+    align-content: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$align-self-properties {
+  .align-self-#{$name} {
+    align-self: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$flex-grow-properties {
+  .flex-grow-#{$name} {
+    flex-grow: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$flex-shrink-properties {
+  .flex-shrink-#{$name} {
+    flex-shrink: #{$value} !important;
+  }
+}

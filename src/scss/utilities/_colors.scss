@@ -1,0 +1,166 @@
+@use "sass:map";
+
+$colors: (
+  "primary": (
+    "50": #e6f7ff,
+    "100": #bae7ff,
+    "200": #91d5ff,
+    "300": #69c0ff,
+    "400": #40a9ff,
+    "500": #1890ff,
+    "600": #096dd9,
+    "700": #0050b3,
+    "800": #003a8c,
+    "900": #002766
+  ),
+  "secondary": (
+    "50": #f6ffed,
+    "100": #d9f7be,
+    "200": #b7eb8f,
+    "300": #95de64,
+    "400": #73d13d,
+    "500": #52c41a,
+    "600": #389e0d,
+    "700": #237804,
+    "800": #135200,
+    "900": #092b00
+  ),
+  "neutral": (
+    "50": #fafafa,
+    "100": #f5f5f5,
+    "200": #e8e8e8,
+    "300": #d9d9d9,
+    "400": #bfbfbf,
+    "500": #8c8c8c,
+    "600": #595959,
+    "700": #434343,
+    "800": #262626,
+    "900": #141414
+  ),
+  "success": (
+    "50": #f0fff4,
+    "100": #d3f9d8,
+    "200": #b7f2bd,
+    "300": #8eeaa1,
+    "400": #52cf7a,
+    "500": #36b366,
+    "600": #279753,
+    "700": #1a7b41,
+    "800": #105f30,
+    "900": #064420
+  ),
+  "warning": (
+    "50": #fffbe6,
+    "100": #fff1b8,
+    "200": #ffe58f,
+    "300": #ffd666,
+    "400": #ffc53d,
+    "500": #faad14,
+    "600": #d48806,
+    "700": #ad6800,
+    "800": #874d00,
+    "900": #613400
+  ),
+  "danger": (
+    "50": #fff1f0,
+    "100": #ffccc7,
+    "200": #ffa39e,
+    "300": #ff7875,
+    "400": #ff4d4f,
+    "500": #f5222d,
+    "600": #cf1322,
+    "700": #a8071a,
+    "800": #820014,
+    "900": #5c0011
+  ),
+  "info": (
+    "50": #e6f7ff,
+    "100": #bae7ff,
+    "200": #91d5ff,
+    "300": #69c0ff,
+    "400": #40a9ff,
+    "500": #1890ff,
+    "600": #096dd9,
+    "700": #0050b3,
+    "800": #003a8c,
+    "900": #002766
+  )
+);
+
+$basic-colors: (
+  "black": #000000,
+  "white": #ffffff,
+  "transparent": transparent
+);
+
+@each $color-name, $color-variants in $colors {
+  @each $shade, $value in $color-variants {
+    .text-#{$color-name}-#{$shade} {
+      color: $value !important;
+    }
+  }
+}
+
+@each $color-name, $color-variants in $colors {
+  @each $shade, $value in $color-variants {
+    .bg-#{$color-name}-#{$shade} {
+      background-color: $value !important;
+    }
+  }
+}
+
+@each $color-name, $color-variants in $colors {
+  @each $shade, $value in $color-variants {
+    .border-#{$color-name}-#{$shade} {
+      border-color: $value !important;
+    }
+  }
+}
+
+@each $color-name, $value in $basic-colors {
+  .text-#{$color-name} {
+    color: $value !important;
+  }
+  
+  .bg-#{$color-name} {
+    background-color: $value !important;
+  }
+  
+  .border-#{$color-name} {
+    border-color: $value !important;
+  }
+}
+
+$opacity-levels: (
+  "10": 0.1,
+  "20": 0.2,
+  "30": 0.3,
+  "40": 0.4,
+  "50": 0.5,
+  "60": 0.6,
+  "70": 0.7,
+  "80": 0.8,
+  "90": 0.9
+);
+
+@each $color-name, $color-variants in $colors {
+  @each $shade, $value in $color-variants {
+    @each $opacity-name, $opacity-value in $opacity-levels {
+      .bg-#{$color-name}-#{$shade}-opacity-#{$opacity-name} {
+        background-color: rgba($value, $opacity-value) !important;
+      }
+      
+      .text-#{$color-name}-#{$shade}-opacity-#{$opacity-name} {
+        color: rgba($value, $opacity-value) !important;
+      }
+      
+      .border-#{$color-name}-#{$shade}-opacity-#{$opacity-name} {
+        border-color: rgba($value, $opacity-value) !important;
+      }
+    }
+  }
+}
+
+@function color($color-name, $shade) {
+  @return map.get(map.get($colors, $color-name), $shade);
+}

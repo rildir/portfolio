@@ -1,0 +1,51 @@
+$spacer: 1px !default;
+$spacer-max: 50 !default; 
+
+$properties: (
+  'm': 'margin',
+  'p': 'padding',
+  'gap': 'gap'
+);
+
+$directions: (
+  't': 'top',
+  'r': 'right',
+  'b': 'bottom',
+  'l': 'left',
+);
+
+@each $prop-key, $prop-value in $properties {
+  @for $i from 1 through $spacer-max {
+    .#{$prop-key}-#{$i} {
+      #{$prop-value}: #{$i}px;
+    }
+  }
+}
+
+@each $prop-key, $prop-value in $properties {
+  @each $dir-key, $dir-value in $directions {
+    @for $i from 1 through $spacer-max {
+      .#{$prop-key}#{$dir-key}-#{$i} {
+        #{$prop-value}-#{$dir-value}: #{$i}px;
+      }
+    }
+  }
+}
+
+@each $prop-key, $prop-value in $properties {
+  @for $i from 1 through $spacer-max {
+    .#{$prop-key}x-#{$i} {
+      #{$prop-value}-left: #{$i}px;
+      #{$prop-value}-right: #{$i}px;
+    }
+  }
+}
+
+@each $prop-key, $prop-value in $properties {
+  @for $i from 1 through $spacer-max {
+    .#{$prop-key}y-#{$i} {
+      #{$prop-value}-top: #{$i}px;
+      #{$prop-value}-bottom: #{$i}px;
+    }
+  }
+}

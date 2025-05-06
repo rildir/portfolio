@@ -1,0 +1,77 @@
+// ?NOTES
+// Font Size
+// Text Align 
+// Font Weight 
+// Line Heights
+// Letter Spacing
+// Text Transform
+// White Space
+// Text Decoration
+
+@use "properties" as props;
+
+$properties: (
+  "font-size": props.$font-size-values,
+  "text-align": props.$text-alignments,
+  "font-weight": props.$font-weights,
+  "line-heights": props.$line-heights,
+  "letter-spacings": props.$letter-spacings,
+  "text-transform": props.$text-transforms,
+  "white-space": props.$white-spaces,
+  "text-decoration": props.$text-decorations,
+  "list-style": props.$list-styles
+);
+
+@each $name, $value in props.$font-size-values {
+  .fs-#{$name} {
+    font-size: #{$value} !important;
+  }
+}
+
+@each $align in props.$text-alignments {
+  .text-#{$align} {
+    text-align: #{$align} !important;
+  }
+}
+
+@each $name, $value in props.$list-styles {
+  .list-style-#{$name} {
+    list-style: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$font-weights {
+  .font-#{$name} {
+    font-weight: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$line-heights {
+  .line-height-#{$name} {
+    line-height: #{$value} !important;
+  }
+}
+
+@each $name, $value in props.$letter-spacings {
+  .letter-spacing-#{$name} {
+    letter-spacing: #{$value} !important;
+  }
+}
+
+@each $transform in props.$text-transforms {
+  .text-#{$transform} {
+    text-transform: #{$transform} !important;
+  }
+}
+
+@each $space in props.$white-spaces {
+  .whitespace-#{$space} {
+    white-space: #{$space} !important;
+  }
+}
+
+@each $decoration in props.$text-decorations {
+  .text-decoration-#{$decoration} {
+    text-decoration: #{$decoration} !important;
+  }
+}

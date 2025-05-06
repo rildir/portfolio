@@ -1,0 +1,267 @@
+$justify-content-properties: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around,
+  "evenly": space-evenly,
+);
+
+$list-styles: (
+  "none": none,
+  "disc": disc,
+  "circle": circle,
+  "square": square,
+  "decimal": decimal
+);
+
+$align-items-properties: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+  "normal": normal,
+);
+
+$align-content-properties: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+  "normal": normal,
+  "space-between": space-between,
+  "space-around": space-around,
+  "space-evenly": space-evenly,
+);
+
+$align-self-properties: (
+  "auto": auto,
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+);
+
+$display-properties: (
+  "block": block,
+  "inline-block": inline-block,
+  "inline": inline,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "inline-grid": inline-grid,
+  "table": table,
+  "inline-table": inline-table,
+  "table-row": table-row,
+  "table-cell": table-cell,
+  "contents": contents,
+  "list-item": list-item,
+  "hidden": none,
+  "none": none,
+);
+
+$flex-direction-properties: ("row", "row-reverse", "column", "column-reverse");
+
+$flex-wrap-properties: ("nowrap", "wrap", "wrap-reverse");
+
+$position-properties: ("static", "relative", "absolute", "fixed", "sticky");
+
+$shadow-properties: (
+  "none": none,
+  "sm": 0 1px 2px rgba(0, 0, 0, 0.05),
+  "md": 0 4px 6px rgba(0, 0, 0, 0.1),
+  "lg": 0 10px 15px rgba(0, 0, 0, 0.15),
+);
+
+$z-index-values: ("auto", "0", "1", "2", "3", "4", "5");
+
+$opacity-values: (
+  "0": 0,
+  "25": 0.25,
+  "50": 0.5,
+  "75": 0.75,
+  "100": 1,
+);
+
+$cursor-values: (
+  "default",
+  "pointer",
+  "move",
+  "text",
+  "wait",
+  "help",
+  "not-allowed",
+  "crosshair",
+  "grab",
+  "grabbing",
+  "resize",
+  "zoom-in",
+  "zoom-out"
+);
+
+$font-size-values: (
+  "0": 0,
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px,
+  "6": 6px,
+  "7": 7px,
+  "8": 8px,
+  "9": 9px,
+  "10": 10px,
+  "11": 11px,
+  "12": 12px,
+  "13": 13px,
+  "14": 14px,
+  "15": 15px,
+  "16": 16px,
+  "17": 17px,
+  "18": 18px,
+  "19": 19px,
+  "20": 20px,
+  "21": 21px,
+  "22": 22px,
+  "23": 23px,
+  "24": 24px,
+  "25": 25px,
+  "26": 26px,
+  "27": 27px,
+  "28": 28px,
+  "29": 29px,
+  "30": 30px,
+  "31": 31px,
+  "32": 32px,
+  "33": 33px,
+  "34": 34px,
+  "35": 35px,
+  "36": 36px,
+  "37": 37px,
+  "38": 38px,
+  "39": 39px,
+  "40": 40px,
+  "41": 41px,
+  "42": 42px,
+  "43": 43px,
+  "44": 44px,
+  "45": 45px,
+  "46": 46px,
+  "47": 47px,
+  "48": 48px,
+  "49": 49px,
+  "50": 50px,
+);
+
+$text-alignments: ("left", "center", "right", "justify");
+
+$font-weights: (
+  "100": 100,
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+  "900": 900,
+);
+
+$line-heights: (
+  "normal": normal,
+  "none": 1,
+  "short": 1.25,
+  "base": 1.5,
+  "tall": 1.75,
+);
+
+$letter-spacings: (
+  "tight": -0.05em,
+  "normal": 0em,
+  "wide": 0.05em,
+  "wider": 0.1em,
+  "widest": 0.25em,
+);
+
+$text-transforms: ("uppercase", "lowercase", "capitalize", "none");
+
+$white-spaces: ("normal", "nowrap", "pre", "pre-line", "pre-wrap");
+
+$text-decorations: ("none", "underline", "overline", "line-through");
+
+$length-values: (
+  "0": 0,
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px,
+  "6": 6px,
+  "7": 7px,
+  "8": 8px,
+  "9": 9px,
+  "10": 10px,
+  "11": 11px,
+  "12": 12px,
+  "13": 13px,
+  "14": 14px,
+  "15": 15px,
+  "16": 16px,
+  "17": 17px,
+  "18": 18px,
+  "19": 19px,
+  "20": 20px,
+  "21": 21px,
+  "22": 22px,
+  "23": 23px,
+  "24": 24px,
+  "25": 25px,
+  "26": 26px,
+  "27": 27px,
+  "28": 28px,
+  "29": 29px,
+  "30": 30px,
+  "31": 31px,
+  "32": 32px,
+  "33": 33px,
+  "34": 34px,
+  "35": 35px,
+  "36": 36px,
+  "37": 37px,
+  "38": 38px,
+  "39": 39px,
+  "40": 40px,
+  "41": 41px,
+  "42": 42px,
+  "43": 43px,
+  "44": 44px,
+  "45": 45px,
+  "46": 46px,
+  "47": 47px,
+  "48": 48px,
+  "49": 49px,
+  "50": 50%,
+  "75": 75%,
+  "100": 100%,
+  "auto": auto,
+);
+
+$transition-durations: (
+  "default": 0.2s,
+  "fast": 0.1s,
+  "slow": 0.4s,
+);
+
+$visibility-values: ("visible", "hidden");
+
+$flex-grow-properties: (
+  "0": 0,
+  "1": 1,
+);
+
+$flex-shrink-properties: (
+  "0": 0,
+  "1": 1,
+);

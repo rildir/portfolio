@@ -1,0 +1,11 @@
+@use "properties" as props;
+
+$position-properties: (
+  "position": props.$position-properties,
+);
+
+@each $pos in props.$position-properties {
+  .#{$pos} {
+    position: #{$pos} !important;
+  }
+}
